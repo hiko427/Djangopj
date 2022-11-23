@@ -12,7 +12,7 @@ def register(request):
         form = NewUserForm(request.POST)
         if form.is_valid():
             user = form.save()
-            return redirect('myapp/products')
+            return redirect('/users/login')
 
     form = NewUserForm()
     context = {

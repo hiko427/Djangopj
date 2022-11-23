@@ -57,6 +57,7 @@ def add_product(request):
         product = Product(name=name, price=price, desc=desc,
                           image=image, seller_name=seller_name)
         product.save()
+        return redirect('/myapp/products/mylistings')
 
     return render(request, 'myapp/addproduct.html')
 
